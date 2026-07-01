@@ -1,0 +1,22 @@
+#ifndef GSV2K11_PAR_MAP_FCT_H
+#define GSV2K11_PAR_MAP_FCT_H
+#define GSV2K11_PAR_set_RX_PAR_EN(gsv_config,port, val)                           AvHalI2cWriteField8(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x00, 0x2, 0x1, val)
+#define GSV2K11_PAR_set_TX_PAR_EN(gsv_config,port, val)                           AvHalI2cWriteField8(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x00, 0x1, 0x0, val)
+#define GSV2K11_PAR_get_RB_RX_PAR_HS_LOCK(gsv_config,port, pval)                  AvHalI2cReadField8(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x17, 0x80, 0x7, pval)
+#define GSV2K11_PAR_set_RX_ITU_DECODE_RESOLUTION(gsv_config,port, val)            AvHalI2cWriteField8(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x31, 0xFF, 0, val)
+#define GSV2K11_PAR_set_RX_ITU_DECODE_H_TOTAL(gsv_config,port, val)               AvHalI2cWriteField32BE(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x33, 0x1F, 0xFF, 0, 2, val)
+#define GSV2K11_PAR_set_RX_ITU_DECODE_H_BLANK(gsv_config,port, val)               AvHalI2cWriteField32BE(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x35, 0x1F, 0xFF, 0, 2, val)
+#define GSV2K11_PAR_set_RX_ITU_DECODE_H_FRONT(gsv_config,port, val)               AvHalI2cWriteField32BE(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x37, 0x1F, 0xFF, 0, 2, val)
+#define GSV2K11_PAR_set_RX_ITU_DECODE_H_BACK(gsv_config,port, val)                AvHalI2cWriteField32BE(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x39, 0x1F, 0xFF, 0, 2, val)
+#define GSV2K11_PAR_set_RX_ITU_DECODE_H_POL(gsv_config,port, val)                 AvHalI2cWriteField8(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x3F, 0x4, 0x2, val)
+#define GSV2K11_PAR_set_RX_ITU_DECODE_V_POL(gsv_config,port, val)                 AvHalI2cWriteField8(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x3F, 0x1, 0x0, val)
+#define GSV2K11_PAR_set_RX_ITU_DECODE_V_TOTAL1(gsv_config,port, val)              AvHalI2cWriteField32BE(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x40, 0x1F, 0xFF, 0, 2, val)
+#define GSV2K11_PAR_set_RX_ITU_DECODE_V_TOTAL2(gsv_config,port, val)              AvHalI2cWriteField32BE(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x42, 0x1F, 0xFF, 0, 2, val)
+#define GSV2K11_PAR_set_RX_ITU_DECODE_V_BLANK1(gsv_config,port, val)              AvHalI2cWriteField32BE(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x44, 0x1F, 0xFF, 0, 2, val)
+#define GSV2K11_PAR_set_RX_ITU_DECODE_V_BLANK2(gsv_config,port, val)              AvHalI2cWriteField32BE(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x46, 0x1F, 0xFF, 0, 2, val)
+#define GSV2K11_PAR_set_RX_ITU_DECODE_V_FRONT1(gsv_config,port, val)              AvHalI2cWriteField32BE(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x48, 0x1F, 0xFF, 0, 2, val)
+#define GSV2K11_PAR_set_RX_ITU_DECODE_V_FRONT2(gsv_config,port, val)              AvHalI2cWriteField32BE(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x4A, 0x1F, 0xFF, 0, 2, val)
+#define GSV2K11_PAR_set_RX_ITU_DECODE_V_SYNC1(gsv_config,port, val)               AvHalI2cWriteField32BE(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x4C, 0x1F, 0xFF, 0, 2, val)
+#define GSV2K11_PAR_set_RX_ITU_DECODE_V_SYNC2(gsv_config,port, val)               AvHalI2cWriteField32BE(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0x4E, 0x1F, 0xFF, 0, 2, val)
+#define GSV2K11_PAR_set_PAR_PHY_EN_TTL_H12B(gsv_config,port, val)                 AvHalI2cWriteField8(gsv_config,GSV2K11_PAR_MAP_ADDR(port), 0xDA, 0x10, 0x4, val)
+#endif
