@@ -1,0 +1,156 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 11 Administrator, 11, LIC=WHYH9-4VBLD-9U64U-SHJ2A-VTY55-YN3T5
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.43.0.0
+Toolchain Path:  C:\Users\Administrator\AppData\Local\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.43.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      Segger\JL2CM3.dll V2.99.45.0
+Dialog DLL:      TCM.DLL V1.56.6.0
+ 
+<h2>Project:</h2>
+C:\workspace\Application\MDK\Application.uvprojx
+Project File Date:  07/01/2026
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Users\Administrator\AppData\Local\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target_1'
+compiling APP_SOFT_USART.c...
+linking...
+Program Size: Code=134916 RO-data=7384 RW-data=620 ZI-data=129588  
+FromELF: creating hex file...
+After Build - User command #1: C:\Users\Administrator\AppData\Local\Keil_v5\\ARM\ARMCC\bin\fromelf.exe --bin --output=MCU.BIN .\Objects\a.axf
+".\Objects\a.axf" - 0 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: NSING
+                https://www.nsing.com.sg/public/uploads/armpacks/NSING.N32G45x_DFP.1.0.7.pack
+                NSING.N32G45x_DFP.1.0.7
+                Nsing N32G45x Series Device Support, Drivers and Examples
+   * Component: DMA Version: 1.0.0
+   * Component: EXTI Version: 1.0.0
+   * Component: FLASH Version: 1.0.0
+   * Component: GPIO Version: 1.0.0
+   * Component: I2C Version: 1.0.0
+   * Component: MISC Version: 1.0.0
+   * Component: RCC Version: 1.0.0
+   * Component: SPI Version: 1.0.0
+   * Component: TIMER Version: 1.0.0
+   * Component: USART Version: 1.0.0
+   * Component: Startup Version: 1.0.0
+
+Package Vendor: RealThread
+                https://www.rt-thread.org/download/mdk/RealThread.RT-Thread.3.1.5.pack
+                RealThread.RT-Thread.3.1.5
+                RT-Thread Software Components
+   * Component: device Version: 3.1.5
+   * Component: kernel Version: 3.1.5
+   * Component: shell Version: 3.1.5
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/RTOS
+  ./RTE/_Target_1
+  C:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Administrator/AppData/Local/Arm/Packs/NSING/N32G45x_DFP/1.0.7/firmware/CMSIS/device
+  C:/Users/Administrator/AppData/Local/Arm/Packs/NSING/N32G45x_DFP/1.0.7/firmware/n32g45x_std_periph_driver/inc
+  C:/Users/Administrator/AppData/Local/Arm/Packs/RealThread/RT-Thread/3.1.5/components/finsh
+  C:/Users/Administrator/AppData/Local/Arm/Packs/RealThread/RT-Thread/3.1.5/include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: NSING::Device:N32G45x_StdPeripherals:DMA:1.0.0
+      Include file:  firmware/n32g45x_std_periph_driver/inc/n32g45x_dma.h
+      Source file:   firmware/n32g45x_std_periph_driver/src/n32g45x_dma.c
+
+   * Component: NSING::Device:N32G45x_StdPeripherals:EXTI:1.0.0
+      Include file:  firmware/n32g45x_std_periph_driver/inc/n32g45x_exti.h
+      Source file:   firmware/n32g45x_std_periph_driver/src/n32g45x_exti.c
+
+   * Component: NSING::Device:N32G45x_StdPeripherals:FLASH:1.0.0
+      Include file:  firmware/n32g45x_std_periph_driver/inc/n32g45x_flash.h
+      Source file:   firmware/n32g45x_std_periph_driver/src/n32g45x_flash.c
+
+   * Component: NSING::Device:N32G45x_StdPeripherals:GPIO:1.0.0
+      Include file:  firmware/n32g45x_std_periph_driver/inc/n32g45x_gpio.h
+      Source file:   firmware/n32g45x_std_periph_driver/src/n32g45x_gpio.c
+
+   * Component: NSING::Device:N32G45x_StdPeripherals:I2C:1.0.0
+      Source file:   firmware/n32g45x_std_periph_driver/src/n32g45x_i2c.c
+      Include file:  firmware/n32g45x_std_periph_driver/inc/n32g45x_i2c.h
+
+   * Component: NSING::Device:N32G45x_StdPeripherals:MISC:1.0.0
+      Source file:   firmware/n32g45x_std_periph_driver/src/misc.c
+
+   * Component: NSING::Device:N32G45x_StdPeripherals:RCC:1.0.0
+      Include file:  firmware/n32g45x_std_periph_driver/inc/n32g45x_rcc.h
+      Source file:   firmware/n32g45x_std_periph_driver/src/n32g45x_rcc.c
+
+   * Component: NSING::Device:N32G45x_StdPeripherals:SPI:1.0.0
+      Source file:   firmware/n32g45x_std_periph_driver/src/n32g45x_spi.c
+      Include file:  firmware/n32g45x_std_periph_driver/inc/n32g45x_spi.h
+
+   * Component: NSING::Device:N32G45x_StdPeripherals:TIMER:1.0.0
+      Include file:  firmware/n32g45x_std_periph_driver/inc/n32g45x_tim.h
+      Source file:   firmware/n32g45x_std_periph_driver/src/n32g45x_tim.c
+
+   * Component: NSING::Device:N32G45x_StdPeripherals:USART:1.0.0
+      Include file:  firmware/n32g45x_std_periph_driver/inc/n32g45x_usart.h
+      Source file:   firmware/n32g45x_std_periph_driver/src/n32g45x_usart.c
+
+   * Component: NSING::Device:Startup:1.0.0
+      Include file:  firmware/CMSIS/device/n32g45x.h
+      Source file:   firmware/CMSIS/device/startup/startup_n32g45x.s
+      Source file:   firmware/CMSIS/device/system_n32g45x.c
+
+   * Component: RealThread.RT-Thread::RTOS:device:3.1.5
+      Source file:   components/device/device.c
+
+   * Component: RealThread.RT-Thread::RTOS:kernel:3.1.5
+      Source file:   src/clock.c
+      Source file:   bsp/_template/board.c
+      Source file:   src/components.c
+      Include file:  bsp/_template/rtconfig.h
+      Source file:   src/mem.c
+      Source file:   src/irq.c
+      Source file:   src/kservice.c
+      Source file:   src/timer.c
+      Source file:   libcpu/arm/cortex-m4/cpuport.c
+      Source file:   libcpu/arm/cortex-m4/context_rvds.S
+      Source file:   src/idle.c
+      Source file:   src/mempool.c
+      Source file:   src/ipc.c
+      Source file:   src/thread.c
+      Source file:   src/scheduler.c
+      Source file:   src/object.c
+
+   * Component: RealThread.RT-Thread::RTOS:shell:3.1.5
+      Include file:  components/finsh/finsh_config.h
+      Source file:   components/finsh/finsh_port.c
+      Source file:   components/finsh/shell.c
+      Source file:   components/finsh/cmd.c
+      Source file:   components/finsh/msh.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

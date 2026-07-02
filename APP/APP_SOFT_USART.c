@@ -100,7 +100,7 @@ static uint8_t KVM_ModeToFpgaMode(uint8_t kvm_mode, uint8_t *fpga_mode)
             break;
 
         case KVM_MODE_PORT_ALL_SYNC:
-            *fpga_mode = 5;
+            *fpga_mode = 4;
             break;
 
         case KVM_MODE_THREE_SMALL_MAIN_PORT4:
@@ -154,10 +154,7 @@ static uint8_t KVM_FpgaModeToKvmMode(uint8_t fpga_mode, uint8_t *kvm_mode)
 
         case 4:
             *kvm_mode = KVM_MODE_PORT_ALL;
-            break;
-
-        case 5:
-            *kvm_mode = KVM_MODE_PORT_ALL_SYNC;
+						*kvm_mode = KVM_MODE_PORT_ALL_SYNC;
             break;
 
         case 6:
@@ -273,12 +270,12 @@ static void KVM_UART_HandleFrame(uint8_t cmd, uint8_t mode)
                 current_mode = mode;
                 app.mode = fpga_mode;
                 app.activate = true;
+							
                 FUN_WRITE(&app);
-                sprintf(str, "\r\n KVM SET_MODE kvm_mode 0x%02X fpga_mode %d activate %d ",
+                rt_kprintf(str, "\r\n KVM SET_MODE kvm_mode 0x%02X fpga_mode %d activate %d ",
                         current_mode,
                         app.mode,
                         app.activate);
-                BSP_USART_FUN.Write(str, strlen(str));
                 //KVM_UART_SendFrame(KVM_CMD_ACK, current_mode);
             }
             break;
