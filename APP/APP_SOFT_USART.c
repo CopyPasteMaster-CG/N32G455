@@ -154,9 +154,12 @@ static uint8_t KVM_FpgaModeToKvmMode(uint8_t fpga_mode, uint8_t *kvm_mode)
 
         case 4:
             *kvm_mode = KVM_MODE_PORT_ALL;
+						 break;
+				
+				case 5:
 						*kvm_mode = KVM_MODE_PORT_ALL_SYNC;
             break;
-
+				
         case 6:
             *kvm_mode = KVM_MODE_THREE_SMALL_MAIN_PORT1;
             break;
