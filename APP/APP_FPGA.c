@@ -992,19 +992,6 @@ static void function_thread(void * pragram)
             APP_NEC_ClearActivate(&nec);
             // FUN_WRITE(&app);
         }
-                        // else if
-            // {
-            //     //  拨码开关实际配置
-            //     config.mode = key.mode;
-            //     config.out = 0;
-            //     config.turn = 0;
-
-            // }
-            //            else if(key.mode == 14){
-            //                //  串口配置模式
-            //                
-            //                
-            //            }
         /* 软件串口独立处理，始终可用 */
         if(soft_usart_data.activate)
         {
@@ -1016,6 +1003,12 @@ static void function_thread(void * pragram)
                // FUN_WRITE(&app);
             }
            APP_SOFT_USART_ClearActivate(&soft_usart_data);
+        }
+        if(key.mode <= 14){
+            //  DIP switch directly selects mode; 1111 enables IR/USART control
+            config.mode = key.mode;
+            config.out = 0;
+            config.turn = 0;
         }
             //  配置参数发生了变化
             if( (last_config.mode != config.mode)
